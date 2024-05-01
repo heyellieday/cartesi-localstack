@@ -88,7 +88,7 @@ const lambadaTask = new aws.ecs.TaskDefinition("lambadaTask", {
             "image": "zippiehq/cartesi-lambada:latest",
             "essential": true,
             "portMappings": [
-                { "containerPort": 80, "hostPort": 80 }
+                { "containerPort": 3033, "hostPort": 80 }
             ],
             "environment": [
                 { "name": "IPFS_API_URL", "value": "http://${ipfsService.cluster}.${aws.config.region}.amazonaws.com:5001" }
